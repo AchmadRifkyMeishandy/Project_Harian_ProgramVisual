@@ -189,7 +189,7 @@ public class Master_kasir extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        jLabel7.setText("Password");
+        jLabel7.setText("Kata Sandi");
 
         bsimpan.setText("SIMPAN");
         bsimpan.addActionListener(new java.awt.event.ActionListener() {

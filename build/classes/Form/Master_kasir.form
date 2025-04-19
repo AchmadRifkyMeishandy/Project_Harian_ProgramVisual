@@ -282,7 +282,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Password"/>
+        <Property name="text" type="java.lang.String" value="Kata Sandi"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="bsimpan">
