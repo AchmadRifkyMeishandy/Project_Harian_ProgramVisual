@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Apr 2025 pada 13.03
+-- Waktu pembuatan: 23 Apr 2025 pada 08.01
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -46,6 +46,27 @@ INSERT INTO `biodata` (`NIK`, `nama`, `telepon`, `jenis_kelamin`, `alamat`) VALU
 ('203209823', 'rina', '0977678987', 'Perempuan', 'rasena'),
 ('4543', 'indro', '089632832837', 'Laki Laki', 'jalan raya condet'),
 ('A12', 'lana', '09909870709', 'Laki Laki', 'jalan pasming');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_barang`
+--
+
+CREATE TABLE `tb_barang` (
+  `kd_brg` int(10) NOT NULL,
+  `nm_brg` varchar(255) NOT NULL,
+  `jenis_brg` varchar(255) NOT NULL,
+  `hargabeli` int(255) NOT NULL,
+  `hargajual` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tb_barang`
+--
+
+INSERT INTO `tb_barang` (`kd_brg`, `nm_brg`, `jenis_brg`, `hargabeli`, `hargajual`) VALUES
+(2, 'Coca-Cola', 'Minuman', 100, 300);
 
 -- --------------------------------------------------------
 
@@ -105,6 +126,12 @@ ALTER TABLE `biodata`
   ADD PRIMARY KEY (`NIK`);
 
 --
+-- Indeks untuk tabel `tb_barang`
+--
+ALTER TABLE `tb_barang`
+  ADD PRIMARY KEY (`kd_brg`);
+
+--
 -- Indeks untuk tabel `tb_kasir`
 --
 ALTER TABLE `tb_kasir`
@@ -119,6 +146,12 @@ ALTER TABLE `tb_login`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_barang`
+--
+ALTER TABLE `tb_barang`
+  MODIFY `kd_brg` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kasir`
