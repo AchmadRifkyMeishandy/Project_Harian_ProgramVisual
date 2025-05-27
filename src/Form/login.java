@@ -119,14 +119,15 @@ public class login extends javax.swing.JFrame {
     private void bloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloginActionPerformed
         // TODO add your handling code here:
         try {
-            String sql = "SELECT * FROM tb_login WHERE id_teknisi = ? AND sandi = ?";
+            String sql = "SELECT * FROM tb_kasir WHERE id_kasir = ? AND password = ?";
             PreparedStatement stat = cn.prepareStatement(sql);
             stat.setString(1, id_teknisi.getText());
             stat.setString(2, sandi.getText());
             ResultSet hasil = stat.executeQuery();
 
             if (hasil.next()) {
-                UserID.setUserLogin(hasil.getString("id_teknisi"));
+                UserID.setIdTeknisi(hasil.getString("id_kasir"));
+                 UserID.setNamaTeknisi(hasil.getString("nm_kasir"));
                 JOptionPane.showMessageDialog(null, "Login Berhasil");
                 this.setVisible(false);
                 menu_utama sett = new menu_utama();

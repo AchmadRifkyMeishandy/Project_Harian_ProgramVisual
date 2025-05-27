@@ -41,7 +41,7 @@ public class menu_utama extends javax.swing.JFrame {
         menu_barang = new javax.swing.JMenuItem();
         menu_kasir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menu_nota = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,14 +70,24 @@ public class menu_utama extends javax.swing.JFrame {
         jMenu1.add(menu_barang);
 
         menu_kasir.setText("Kasir");
+        menu_kasir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_kasirActionPerformed(evt);
+            }
+        });
         jMenu1.add(menu_kasir);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Transaksi");
 
-        jMenuItem4.setText("Nota");
-        jMenu2.add(jMenuItem4);
+        menu_nota.setText("Nota");
+        menu_nota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_notaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menu_nota);
 
         jMenuBar1.add(jMenu2);
 
@@ -124,6 +134,20 @@ public class menu_utama extends javax.swing.JFrame {
         mb.setLocationRelativeTo(null);
     }//GEN-LAST:event_menu_barangActionPerformed
 
+    private void menu_kasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_kasirActionPerformed
+        // TODO add your handling code here:
+        Master_kasir ks = new Master_kasir();
+        ks.setVisible(true);
+        ks.setLocationRelativeTo(null);
+    }//GEN-LAST:event_menu_kasirActionPerformed
+
+    private void menu_notaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_notaActionPerformed
+        // TODO add your handling code here:
+        Transaksi_nota tn = new Transaksi_nota();
+        tn.setVisible(true);
+        tn.setLocationRelativeTo(null);
+    }//GEN-LAST:event_menu_notaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -165,9 +189,9 @@ public class menu_utama extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem menu_barang;
     private javax.swing.JMenuItem menu_kasir;
+    private javax.swing.JMenuItem menu_nota;
     private javax.swing.JMenuItem menu_pelanggan;
     // End of variables declaration//GEN-END:variables
 }

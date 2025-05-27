@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Apr 2025 pada 08.01
+-- Waktu pembuatan: 27 Bulan Mei 2025 pada 12.31
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.0.30
 
@@ -71,11 +71,25 @@ INSERT INTO `tb_barang` (`kd_brg`, `nm_brg`, `jenis_brg`, `hargabeli`, `hargajua
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tb_isi`
+--
+
+CREATE TABLE `tb_isi` (
+  `id_nota` varchar(20) NOT NULL,
+  `kd_barang` varchar(50) NOT NULL,
+  `hb` varchar(255) NOT NULL,
+  `hj` varchar(255) NOT NULL,
+  `qty` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tb_kasir`
 --
 
 CREATE TABLE `tb_kasir` (
-  `id_kasir` int(10) NOT NULL,
+  `id_kasir` varchar(20) NOT NULL,
   `nm_kasir` varchar(30) NOT NULL,
   `jk_kasir` varchar(20) NOT NULL,
   `telp_kasir` varchar(30) NOT NULL,
@@ -89,8 +103,8 @@ CREATE TABLE `tb_kasir` (
 --
 
 INSERT INTO `tb_kasir` (`id_kasir`, `nm_kasir`, `jk_kasir`, `telp_kasir`, `agama`, `alamat`, `password`) VALUES
-(1, 'Martin', 'Laki-Laki', '08787287473', 'islam', 'Jakarta Timur', '23456'),
-(2, 'Marsel', 'Laki-Laki', '08787283224', 'islam', 'Jakarta Timur', '12345');
+('K1', 'Shandy', 'Laki-Laki', '0892892863', 'islam', 'Jakarta', '300504'),
+('K3', 'Rifky', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '300504');
 
 -- --------------------------------------------------------
 
@@ -99,7 +113,7 @@ INSERT INTO `tb_kasir` (`id_kasir`, `nm_kasir`, `jk_kasir`, `telp_kasir`, `agama
 --
 
 CREATE TABLE `tb_login` (
-  `id_teknisi` int(10) NOT NULL,
+  `id_teknisi` varchar(10) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `sandi` varchar(100) NOT NULL,
   `jenkel` varchar(20) NOT NULL,
@@ -111,9 +125,23 @@ CREATE TABLE `tb_login` (
 --
 
 INSERT INTO `tb_login` (`id_teknisi`, `nama`, `sandi`, `jenkel`, `hp`) VALUES
-(1, '[value-2]', '[12345]', '[value-4]', '[value-5]'),
-(2, '[value-2]', '[123456]', '[value-4]', '[value-5]'),
-(3, '[value-2]', '[78910]', '[value-4]', '[value-5]');
+('1', '[value-2]', '[12345]', '[value-4]', '[value-5]'),
+('2', '[value-2]', '[123456]', '[value-4]', '[value-5]'),
+('3', '[value-2]', '[78910]', '[value-4]', '[value-5]'),
+('k2', '[value-2]', '300504', '[value-4]', '[value-5]');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_nota`
+--
+
+CREATE TABLE `tb_nota` (
+  `id_nota` varchar(20) NOT NULL,
+  `tgl_nota` varchar(50) NOT NULL,
+  `id_pelanggan` varchar(50) NOT NULL,
+  `id_kasir` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -152,18 +180,6 @@ ALTER TABLE `tb_login`
 --
 ALTER TABLE `tb_barang`
   MODIFY `kd_brg` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT untuk tabel `tb_kasir`
---
-ALTER TABLE `tb_kasir`
-  MODIFY `id_kasir` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT untuk tabel `tb_login`
---
-ALTER TABLE `tb_login`
-  MODIFY `id_teknisi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

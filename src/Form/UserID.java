@@ -10,6 +10,24 @@ package Form;
  */
 public class UserID {
     private static String kd;
+    private static String txt_id;
+    private static String txt_nama;
+    
+    static void setIdTeknisi(String idTek) {
+        UserID.txt_id = idTek;
+    }
+    
+    public static String getIdTeknisi() {
+        return txt_id;
+    }
+
+     public static void setNamaTeknisi(String namaTeknisi) {
+        UserID.txt_nama = namaTeknisi;
+    }
+
+     public static String getNamaTeknisi() {
+        return txt_nama;
+    }
 
     static void setUserLogin(String kode) {
         UserID.kd = kode;
