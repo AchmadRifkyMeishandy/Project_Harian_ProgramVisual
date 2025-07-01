@@ -25,7 +25,7 @@ public class login extends javax.swing.JFrame {
     }
     
     protected void aktif() {
-        id_teknisi.requestFocus();
+        id_login.requestFocus();
     }
     
 
@@ -40,7 +40,7 @@ public class login extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        id_teknisi = new javax.swing.JTextField();
+        id_login = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         blogin = new javax.swing.JButton();
         bregis = new javax.swing.JButton();
@@ -89,7 +89,7 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
-                    .addComponent(id_teknisi, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(id_login, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
                     .addComponent(sandi))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -101,7 +101,7 @@ public class login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(id_teknisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(id_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -121,7 +121,7 @@ public class login extends javax.swing.JFrame {
         try {
             String sql = "SELECT * FROM tb_kasir WHERE id_kasir = ? AND password = ?";
             PreparedStatement stat = cn.prepareStatement(sql);
-            stat.setString(1, id_teknisi.getText());
+            stat.setString(1, id_login.getText());
             stat.setString(2, sandi.getText());
             ResultSet hasil = stat.executeQuery();
 
@@ -134,7 +134,7 @@ public class login extends javax.swing.JFrame {
                 sett.setVisible(true);
                 sett.setLocationRelativeTo(null);
             } else {
-                JOptionPane.showMessageDialog(null, "ID Teknisi atau Sandi salah");
+                JOptionPane.showMessageDialog(null, "ID Kasir atau Sandi salah");
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Gagal Login: " + e);
@@ -192,7 +192,7 @@ public class login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton blogin;
     private javax.swing.JButton bregis;
-    private javax.swing.JTextField id_teknisi;
+    private javax.swing.JTextField id_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
