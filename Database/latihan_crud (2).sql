@@ -40,12 +40,12 @@ CREATE TABLE `biodata` (
 --
 
 INSERT INTO `biodata` (`NIK`, `nama`, `telepon`, `jenis_kelamin`, `alamat`) VALUES
-('123', 'shandy', '08907876', 'Laki Laki', 'jalan rasena'),
-('123456', 'dono', '0872947927', 'Laki Laki', 'jalan kambing hitam'),
-('124', 'naila', '0898376345', 'Perempuan', 'jalan asem timur'),
-('203209823', 'rina', '0977678987', 'Perempuan', 'rasena'),
-('4543', 'indro', '089632832837', 'Laki Laki', 'jalan raya condet'),
-('A12', 'lana', '09909870709', 'Laki Laki', 'jalan pasming');
+('D001', 'Nama Contoh 01', '080000000031', 'Laki Laki', 'Alamat Contoh 01'),
+('D002', 'Nama Contoh 02', '080000000032', 'Laki Laki', 'Alamat Contoh 02'),
+('D003', 'Nama Contoh 03', '080000000033', 'Perempuan', 'Alamat Contoh 03'),
+('D004', 'Nama Contoh 04', '080000000034', 'Perempuan', 'Alamat Contoh 04'),
+('D005', 'Nama Contoh 05', '080000000035', 'Laki Laki', 'Alamat Contoh 05'),
+('D006', 'Nama Contoh 06', '080000000036', 'Laki Laki', 'Alamat Contoh 06');
 
 -- --------------------------------------------------------
 
@@ -103,8 +103,8 @@ CREATE TABLE `tb_kasir` (
 --
 
 INSERT INTO `tb_kasir` (`id_kasir`, `nm_kasir`, `jk_kasir`, `telp_kasir`, `agama`, `alamat`, `password`) VALUES
-('K1', 'Shandy', 'Laki-Laki', '0892892863', 'islam', 'Jakarta', '300504'),
-('K3', 'Rifky', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '300504');
+('K1', 'Kasir Demo 01', 'Laki-Laki', '080000000041', 'Tidak disebutkan', 'Alamat Contoh 01', 'DemoOnly2026!'),
+('K3', 'Kasir Demo 02', 'Laki-Laki', '080000000042', 'Tidak disebutkan', 'Alamat Contoh 02', 'DemoOnly2026!');
 
 -- --------------------------------------------------------
 
@@ -125,10 +125,10 @@ CREATE TABLE `tb_login` (
 --
 
 INSERT INTO `tb_login` (`id_teknisi`, `nama`, `sandi`, `jenkel`, `hp`) VALUES
-('1', '[value-2]', '[12345]', '[value-4]', '[value-5]'),
-('2', '[value-2]', '[123456]', '[value-4]', '[value-5]'),
-('3', '[value-2]', '[78910]', '[value-4]', '[value-5]'),
-('k2', '[value-2]', '300504', '[value-4]', '[value-5]');
+('1', 'Teknisi Demo 01', 'DemoOnly2026!', 'Laki-Laki', '080000000051'),
+('2', 'Teknisi Demo 02', 'DemoOnly2026!', 'Laki-Laki', '080000000052'),
+('3', 'Teknisi Demo 03', 'DemoOnly2026!', 'Laki-Laki', '080000000053'),
+('k2', 'Teknisi Demo 04', 'DemoOnly2026!', 'Laki-Laki', '080000000054');
 
 -- --------------------------------------------------------
 
